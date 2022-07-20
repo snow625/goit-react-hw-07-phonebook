@@ -39,9 +39,11 @@ export const addContact = createAsyncThunk(
   {
     condition: (data, { getState }) => {
       const { contacts } = getState();
-      const isInclude = contacts.items.find((el) => el.name === data.name);
+      const isInclude = contacts.items.find(
+        (el) => el.name.toLowerCase() === data.name.toLowerCase()
+      );
       if (isInclude) {
-        alert(`${data.name} you have in the contacts`);
+        alert(`"${isInclude.name}" is already in your contacts`);
         return false;
       }
     },
