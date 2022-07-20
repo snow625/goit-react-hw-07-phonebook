@@ -1,10 +1,9 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
-// import contactsReduce from "./contacts/contactsReduce";
-import phoneBookReducer from "./phoneBook/phoneBook-reducer";
+import contactsReduce from "./contacts/contacts-slice";
 
 const rootReducer = combineReducers({
-  contacts: phoneBookReducer,
+  contacts: contactsReduce,
 });
 
 export default rootReducer;

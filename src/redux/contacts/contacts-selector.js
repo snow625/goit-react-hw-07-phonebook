@@ -1,3 +1,3 @@
 export const getContacts = (store) => {
-  return store.contacts.items;
+  return store.contacts;
 };
